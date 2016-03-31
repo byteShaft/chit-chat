@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -34,9 +33,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        signUp = (Button) findViewById(R.id.sign_up);
+        signUp = (Button) findViewById(R.id.signUp);
         name = (EditText) findViewById(R.id.edit_text_name);
         number = (EditText) findViewById(R.id.edit_text_phone_number);
         password = (EditText) findViewById(R.id.edit_text_password);
@@ -130,7 +127,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_up:
+            case R.id.signUp:
                 if (!name.getText().toString().trim().isEmpty() &&
                         !password.getText().toString().trim().isEmpty() &&
                         !number.getText().toString().trim().isEmpty()) {
@@ -155,6 +152,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             public void onSuccess(QBUser user, Bundle args) {
                 System.out.println(user.getEmail());
                 System.out.println(user.getFullName());
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
             }
 
