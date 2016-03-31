@@ -32,11 +32,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        signUp = (Button) findViewById(R.id.signUp);
+        setContentView(R.layout.sign_up);
         name = (EditText) findViewById(R.id.edit_text_name);
         number = (EditText) findViewById(R.id.edit_text_phone_number);
         password = (EditText) findViewById(R.id.edit_text_password);
+        signUp = (Button) findViewById(R.id.signUp);
         signUp.setOnClickListener(this);
         number.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
