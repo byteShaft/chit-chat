@@ -133,6 +133,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                         !number.getText().toString().trim().isEmpty()) {
                     signUp(number.getText().toString(), password.getText().toString(),
                             name.getText().toString());
+                } else {
+                    Toast.makeText(getApplicationContext(), "All fields must be filled",
+                            Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
@@ -153,7 +156,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 System.out.println(user.getEmail());
                 System.out.println(user.getFullName());
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-
             }
 
             @Override
