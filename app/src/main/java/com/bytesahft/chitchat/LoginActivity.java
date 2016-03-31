@@ -66,6 +66,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                         }
                     });
+                } else {
+                    Toast.makeText(getApplicationContext(), "All fields must be filled",
+                            Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
