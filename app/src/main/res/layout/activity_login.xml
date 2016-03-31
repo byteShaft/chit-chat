@@ -59,17 +59,22 @@
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
         android:layout_marginTop="46dp"
         android:layout_below="@+id/pass"
         android:layout_centerHorizontal="true" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_sign_up"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
         android:text="Sign up"
         android:layout_below="@+id/btn_login"
         android:layout_alignLeft="@+id/btn_login"
