@@ -72,8 +72,8 @@
         android:layout_alignStart="@+id/edit_text_phone_number" />
     </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/sign_up"
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/signUp"
         android:text="sign up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

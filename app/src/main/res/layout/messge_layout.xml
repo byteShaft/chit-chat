@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="4dp">
+
+    <EditText
+        android:id="@+id/message_out_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:hint="message" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_below="@id/message_out_edittext"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/send_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="send"
+        android:clickable="false"
+        android:layout_below="@id/message_out_edittext" />
+
+    <EditText
+        android:id="@+id/messages_in_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="message"
+        android:editable="false" />
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:id="@+id/messages_in_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/messages_in_edittext"
+        android:text="Message received" />
+
+</RelativeLayout>
